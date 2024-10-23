@@ -9,15 +9,15 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var centerOutlet: UILabel!
+    @IBOutlet weak var centerOutlet: UIImageView!
 
-    @IBOutlet weak var trOutlet: UILabel!
+    @IBOutlet weak var trOutlet: UIImageView!
     
-    @IBOutlet weak var tlOutlet: UILabel!
+    @IBOutlet weak var tlOutlet: UIImageView!
     
-    @IBOutlet weak var blOutlet: UILabel!
+    @IBOutlet weak var blOutlet: UIImageView!
     
-    @IBOutlet weak var brOutlet: UILabel!
+    @IBOutlet weak var brOutlet: UIImageView!
     
     func check() {
         var cX = centerOutlet.frame.origin.x
@@ -56,30 +56,31 @@ class ViewController: UIViewController {
         var tapLoc = sender.location(in: view)
         centerOutlet.center = tapLoc
         check()
-    }
+        }
     
-    @IBAction func trRecog(_ sender: UIPanGestureRecognizer) {
+    @IBAction func topRRecog(_ sender: UIPanGestureRecognizer) {
         var trLoc = sender.location(in: view)
         trOutlet.center = trLoc
         check()
     }
     
-    @IBAction func tlRecog(_ sender: UIPanGestureRecognizer) {
+    @IBAction func topLRecog(_ sender: UIPanGestureRecognizer) {
         var tlLoc = sender.location(in: view)
         tlOutlet.center = tlLoc
         check()
     }
     
-    @IBAction func blRecog(_ sender: UIPanGestureRecognizer) {
+    @IBAction func bottomLRecog(_ sender: UIPanGestureRecognizer) {
         var blLoc = sender.location(in: view)
         blOutlet.center = blLoc
         check()
     }
     
-    @IBAction func brRecog(_ sender: UIPanGestureRecognizer) {
+    @IBAction func bottomRRecog(_ sender: UIPanGestureRecognizer) {
         var brLoc = sender.location(in: view)
         brOutlet.center = brLoc
         check()
+
     }
     
 }
